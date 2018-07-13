@@ -1,0 +1,32 @@
+package com.example.demo.cdi;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+
+@RunWith(MockitoJUnitRunner.class)
+//@ContextConfiguration(classes=DemoApplication.class)
+public class SomeCDIBusinessTest {
+	
+	@InjectMocks
+	SomeCDIBusiness business;
+	
+	@Mock
+	SomeCdiDao daoMock;
+
+	@Test
+	public void testBasicScenario() {
+		
+		//when daoMock.getData()
+		
+		
+		int actualResult = business.findGreatest();
+		
+		assertEquals(100, actualResult);
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.example.springaop.aspect;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Configuration;
+
+//AOP
+//Configuration
+@Configuration
+public class BeforeAspect {
+	
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	
+	//What kind of method calls I would
+	public void before() {
+		logger.info("Intercepted Method Calls {}");
+	}
+}

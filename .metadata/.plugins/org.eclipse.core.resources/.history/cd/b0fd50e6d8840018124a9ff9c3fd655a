@@ -1,0 +1,14 @@
+package com.example.demo.cdi;
+
+public class SomeCDIBusiness {
+	SomeCdiDao someCDIDAO;
+
+	public SomeCdiDao getSomeCDIDAO() {
+		return someCDIDAO;
+	}
+
+	public void setSomeCDIDAO(SomeCdiDao someCDIDAO) {
+		this.someCDIDAO = someCDIDAO;
+	}
+	
+}

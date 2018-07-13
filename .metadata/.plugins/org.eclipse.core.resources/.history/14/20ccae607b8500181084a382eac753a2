@@ -1,0 +1,17 @@
+package com.example.demo.basic;
+
+import org.junit.Test;
+import org.springframework.test.context.ContextConfiguration;
+
+//Load the context
+@ContextConfiguration(classes=DemoApplication.class)
+public class BinarySearchImplTest {
+	
+	BinarySearchImpl binarySearchImpl;
+
+	@Test
+	public void testBasicScenario() {
+		
+	}
+
+}

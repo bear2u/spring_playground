@@ -1,0 +1,38 @@
+package com.example.springaop.aspect;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Configuration;
+
+//AOP
+//Configuration
+@Aspect
+@Configuration
+public class AfterAopAspect {
+	
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	
+	//What kind of method calls I would
+	//execution(* PACKAGE.*.*(..))
+	
+	@AfterReturning(
+			value="execution(* com.example.springaop.business.*.*(..))",
+			returning="result"
+			)
+	public void afterReturning(JoinPoint joinpoint, Object result) {
+		logger.info("{} ", joinpoint, result);
+	}
+	
+	@AfterThrowing(
+			value="execution(* com.example.springaop.business.*.*(..))",
+			throwing="exception"
+			)
+	public void afterThrowing(JoinPoint joinpoint, Throwable exception) {
+		logger.info("{} ", joinpoint, exception);
+	}
+}

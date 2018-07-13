@@ -1,0 +1,14 @@
+package com.example.demo.cdi;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class SomeCDIBusinessTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

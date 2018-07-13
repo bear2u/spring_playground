@@ -1,0 +1,7 @@
+package com.example.demo;
+
+public class JdbcConnection {
+	public JdbcConnection() {
+		System.out.println("JDBC Connection");
+	}
+}

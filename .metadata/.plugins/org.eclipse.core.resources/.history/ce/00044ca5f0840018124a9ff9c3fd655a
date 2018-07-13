@@ -1,0 +1,18 @@
+package pe.kr.mockito.mockitodemo;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.mockito.Mockito;
+
+public class SomeBusinessMockTest {
+
+	@Test
+	public void findTheGreatestFromAllData() {
+		DataService dataServiceMock = Mockito.mock(DataService.class);
+		SomeBusinessImpl businessImpl = new SomeBusinessImpl(new DataServiceStub());		
+		int result = businessImpl.findTheGreatestFromAllData();
+		assertEquals(4, result);
+	}
+
+}

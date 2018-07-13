@@ -1,0 +1,13 @@
+package com.example.demo.properties;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class SomeExternalService {
+
+	@Value("${external.service.url}")
+	private String url;
+	
+	public String returnServiceURL() {
+		return url;
+	}
+}

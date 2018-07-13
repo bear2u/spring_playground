@@ -1,0 +1,12 @@
+package pe.kr.mockito.mockitodemo;
+
+import org.junit.Test;
+
+public class SomeBusinessTest {
+
+	@Test
+	public void findTheGreatestFromAllData() {
+		
+	}
+
+}

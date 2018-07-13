@@ -1,0 +1,24 @@
+package pe.kr.mockito.mockitodemo;
+
+import org.junit.Test;
+
+public class SomeBusinessTest {
+
+	@Test
+	public void findTheGreatestFromAllData() {
+		SomeBusinessImpl businessImpl = new SomeBusinessImpl();
+		businessImpl.setDataService(new DataServiceStub());
+		businessImpl.findTheGreatestFromAllData();
+	}
+
+}
+
+class DataServiceStub implements DataService {
+
+	@Override
+	public int[] retrieveAllData() {
+		// TODO Auto-generated method stub
+		return new int[] {1,2,3,4};
+	}
+	
+}

@@ -1,0 +1,19 @@
+package com.example.demo.xml;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class XmlPersonDAO {
+	@Autowired
+	XmlJdbcConnection jdbcConnection;
+
+	public XmlJdbcConnection getJdbcConnection() {
+		return jdbcConnection;
+	}
+
+	public void setJdbcConnection(XmlJdbcConnection jdbcConnection) {
+		this.jdbcConnection = jdbcConnection;
+	}
+	
+}

@@ -1,0 +1,20 @@
+package com.example.demo.cdi;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class SomeCDIBusiness {
+	
+	@Autowired
+	SomeCdiDao someCdiDao;
+	
+	public SomeCdiDao getSomeCDIDAO() {
+		return someCDIDAO;
+	}
+
+	public void setSomeCDIDAO(SomeCdiDao someCDIDAO) {
+		this.someCDIDAO = someCDIDAO;
+	}
+	
+}
