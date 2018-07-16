@@ -33,20 +33,21 @@ public class UserResource {
 	}
 	
 	@GetMapping("/users/{id}")
-	public User retriveUser(@PathVariable int id) {
+	public Resource<User> retriveUser(@PathVariable int id) {
 		User user = service.findOne(id);
 		if(user == null) 
 			throw new UserNotFoundException("id-"+ id);
 		
 		//"all-users", SERVER_PATH + "/users"
 		//retrieveAllUsers
+		System.out.println("user: " + user);
 		Resource<User> resource = new Resource<User>(user);
 		
 		ControllerLinkBuilder linkTo = linkTo(methodOn(this.getClass()).retrieveAllUsers());
 		
 		resource.add(linkTo.withRel("all-users"));
 		
-		return user;
+		return resource;
 	}
 	
 	@DeleteMapping("/users/{id}")
@@ -57,6 +58,8 @@ public class UserResource {
 			throw new UserNotFoundException("id-"+ id);
 		
 	}
+	
+	
 	
 	@PostMapping("/users")
 	public ResponseEntity<Object> createUser(@Valid @RequestBody User user) {
