@@ -6,9 +6,40 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\worksapce_spring\restful-web-services"/>
+			<item value="D:\worksapce_spring\database-demo4\database-demo4"/>
+			<item value="D:\worksapce_spring\database-demo3"/>
+			<item value="D:\worksapce_spring\Step01\Step01"/>
+			<item value="D:\worksapce_spring\database-demo"/>
+			<item value="D:\worksapce_spring\spring-aop"/>
 			<item value="D:\worksapce_spring\demo-apps"/>
 			<item value="D:\worksapce_spring\mockito-demo"/>
 			<item value="D:\worksapce_spring\Spring-demo-step1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenCheckoutLocationPage">
+		<list key="scmUrl">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="D:\worksapce_spring\mockito-demo"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
